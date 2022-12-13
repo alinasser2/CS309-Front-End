@@ -13,7 +13,7 @@ function Input({label,type="text",inputName,data,handleChange,errors,...rest}){
                     value={data[inputName]}
                     onChange={handleChange}
                     {...rest} />
-{errors[inputName] && <div>className="alert alert-denger">{errors[inputName]}</div>}
+{errors[inputName] && <div>className="alert alert-denger"{errors[inputName]}</div>}
 </div>
 );
  } 

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function regester() {
+function Regester() {
   return (
     <h1>regester</h1>
   );
 }
 
-export default regester
+export default Regester

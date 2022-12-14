@@ -1,11 +1,11 @@
-
 import React from 'react';
-import ReactDom from "react-dom";
+import ReactDOM from 'react-dom/client';
 import App from './App';
-import {BrowserRouter,Route} from 'react-router-dom';
-// import Axios from "./Services/axiosService";
-// import AxiosContext from "./Services/context";
 
 
-
-ReactDom.render(<App/>,document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

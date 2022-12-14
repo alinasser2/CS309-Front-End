@@ -44,4 +44,3 @@ function Regester() {
 }
 
 export default Regester
-export default Regester

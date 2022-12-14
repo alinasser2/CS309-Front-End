@@ -1,7 +1,7 @@
 import React from "react"
 import {BrowserRouter,Route,Routes} from 'react-router-dom';
 import Regester from './Pages/Regester'
-import Login from './Pages/login'
+import Login from './Pages/Login'
 import Home from './Pages/Home';
  // import {} from '';
  // import Axios from "./Services/axiosService";
@@ -20,7 +20,7 @@ import Home from './Pages/Home';
 
         <Routes>
             <Route excet path="/" element={<Home/>} />
-            <Route path="/login" element={<Login/>} />
+            <Route path="/Login" element={<Login/>} />
             <Route  path="/Regester" element={<Regester/>} /> 
             {/* <Route path='/' element={}/> */} 
         </Routes>

@@ -2,7 +2,7 @@ import React,{UseState} from 'react';
 import  Input  from '../components/Input';
 import valit from 'valit';
 
-function login() {
+function Login() {
   const[data,setData]= UseState({
     email:'',
     password:''

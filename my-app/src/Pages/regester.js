@@ -60,9 +60,12 @@ return (
            <h2>Register</h2>
             <form className="register-form" onSubmit={handleSubmit}>
             <Input label="Username" inputName="username" data={data} handleChange={handleUserName} placeholder="Username"/>
-            <Input label="Password" inputName="Password" data={data} handleChange={handlePassword1} placeholder="Password"/>
-            <Input label="confirm password" inputName="confirm password" data={data} handlePassword1={handleUserName} placeholder="confirm password"/>  
-            <Input label="email" inputName="email" data={data} handleChange={handleEmail} placeholder="youremail@gmail.com"/>
+            <Input label="Password" type="Password" inputName="Password" data={data} handleChange={handlePassword1} placeholder="Password"/>
+            <Input label="Confirm Password" type="Password" inputName="confirm password" data={data} handleChange={handlePassword2} placeholder="Confirm password"/>  
+            <Input label="Email"  type="email" inputName="email" data={data} handleChange={handleEmail} placeholder="youremail@gmail.com"/>
+            <Input label="phone"  inputName="phone" data={data} handleChange={handlePassword2} placeholder="phone"/>
+            <Input label="city "  inputName="city" data={data} handleChange={handlePassword2} placeholder="city "/>
+            <Input label="state"inputName="state" data={data} handleChange={handlePassword2} placeholder="state"/>
            <button type="submit">Log In</button>
        </form>
       

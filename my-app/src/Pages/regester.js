@@ -1,23 +1,27 @@
-// import React,{UseState} from 'react'
-// import  Input  from '../components/Input';
-// import valit from 'valit';
+import axios from "axios";
+import React, { useState } from "react";
+import  Input  from '../components/Input';
+import valit from 'valit';
+const Register = (props) => {
+    const apiurl='https://jsonplaceholder.typicode.com/users';
 
-// function Regester() {
+   const [email, setEmail] = useState('');
+   const [password1, setPassword1] = useState('');
+   const [password2, setPassword2] = useState('');
+   const [name, setName] = useState('');
 
-//   const[data,setData]= UseState({
-//     username:'',
-//     email:'',
-//     password:'',
-//     confirm_password:'',
-//     phone:'',
-//     city:'',
-//     state:''
+   const[data,setData]= useState({
+    username:'',
+    email:'',
+    password:'',
+    confirm_password:'',
+    phone:'',
+    city:'',
+    state:''
 
-//   });
+ });
 
-//   const[errors,setErrors]= UseState({})
-
-//   const schema ={ 
+//  const schema ={ 
 //     username: valit.creatSchema(valit.string,valit.isRequiered,{
 //         min:5,
 //         max:30,
@@ -30,31 +34,8 @@
 //       label:'Password',
 
 //   })
-
-
-
-//   }
-
-//   return (
-//       <>
-//     <h1>cxmf</h1>
-//     <Input label="Username" inputName="username" data={data}/>
-//      </>
-//   );
-// }
-
-// export default Regester
-import axios from "axios";
-import React, { useState } from "react";
-
-const Register = (props) => {
-    const apiurl='https://jsonplaceholder.typicode.com/users';
-
-    const [email, setEmail] = useState('');
-   const [password1, setPassword1] = useState('');
-   const [password2, setPassword2] = useState('');
-   const [name, setName] = useState('');
-
+// } ;
+ const[errors,setErrors]= useState({})
    const  handleSubmit =async e => {
     e.preventDefault();
     if(password1 !==password2)  return alert("password didn't match"); 
@@ -77,15 +58,11 @@ const handlePassword2=(e)=>{
 return (
        <div className="container">
            <h2>Register</h2>
-       <form className="register-form" onSubmit={handleSubmit}>
-           <label className={name}>FirstName</label>
-           <input value={name} name="name" onChange={handleUserName}  placeholder="firstName" />
-           <label className={email}>email</label>
-           <input value={email} onChange={handleEmail}type="email" placeholder="youremail@gmail.com" name="email" />
-           <label className={password1}>password</label>
-           <input value={password1} onChange={handlePassword1} type="password1" placeholder="password" name="password1" />
-           <label className={password2}>confirm password</label>
-           <input value={password2} onChange={handlePassword2} type="password2" placeholder="confirm password"  name="password" />
+            <form className="register-form" onSubmit={handleSubmit}>
+            <Input label="Username" inputName="username" data={data} handleChange={handleUserName} placeholder="Username"/>
+            <Input label="Password" inputName="Password" data={data} handleChange={handlePassword1} placeholder="Password"/>
+            <Input label="confirm password" inputName="confirm password" data={data} handlePassword1={handleUserName} placeholder="confirm password"/>  
+            <Input label="email" inputName="email" data={data} handleChange={handleEmail} placeholder="youremail@gmail.com"/>
            <button type="submit">Log In</button>
        </form>
       

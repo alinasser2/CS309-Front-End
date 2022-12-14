@@ -3,10 +3,7 @@
 // import valit from 'valit';
 
 // function Login() {
-//   const[data,setData]= UseState({
-//     email:'',
-//     password:''
-//   });
+ 
 
 //   const[errors,setErrors]= UseState({})
 
@@ -39,9 +36,14 @@
 
 import React, { useState } from "react";
 import {Button} from '@mui/material';
+import  Input  from '../components/Input';
  const Login = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
+    const[data,setData]= useState({
+        email:'',
+        password:''
+      });
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -61,7 +63,8 @@ import {Button} from '@mui/material';
                 <h3> password</h3>
                 </label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-
+                <Input label="Username" inputName="username" data={data} handleChange={handleSubmit} placeholder="Username"/>
+                <Input label="Password" inputName="Password" data={data} handleChange={handleSubmit} placeholder="Password"/>
                 <Button variant="contained" type="submit">Log In</Button>
             </form>
             

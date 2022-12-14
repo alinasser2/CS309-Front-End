@@ -1,9 +1,8 @@
-//*//
 import React from "react";
 import {BrowserRouter,Route,Routes,Link} from 'react-router-dom';
-import Register from './Register'
-import Login  from './Login'
-import Home from './Home'
+import Register from './Pages/Regester'
+import Login  from './Pages/Login'
+import Home from './Pages/Home'
 function App() {
   
  

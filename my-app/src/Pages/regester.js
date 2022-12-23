@@ -60,7 +60,7 @@ const handlestate=({target})=>{
 };  
 
 return (
-       <div className="container">
+       <div className="component">
            <h2>Register</h2>
             <form className="register-form" onSubmit={handleSubmit}>
             <Input label="Username"  inputName="username" data={data} errors={errors} handleChange={handleUserName} placeholder="Username" required  />

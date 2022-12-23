@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import  Input  from '../components/Input';
-import {Button} from '@mui/material';
+import {Button,Alert} from '@mui/material';
 
 const Register = (props) => {
 const apiurl='https://jsonplaceholder.typicode.com/users';
@@ -26,6 +26,11 @@ const apiurl='https://jsonplaceholder.typicode.com/users';
     if(data.password !==data.confirm_password)  return alert("password didn't match"); 
    const response = await axios.post(apiurl,data.email,data.password,data.confirm_password,data.username);
 console.log("the name is: " + data.username+"\n  and the password is: " + data.password+" \n and the confirm password is: " + data.confirm_password+"\n  and the email is: " + data.email+"\n  and the phone is: " + data.phone+"\n  and the city is: " + data.city+"\n  and the state is: " + data.state)
+
+{<Alert variant="filled" severity="error">
+  This is an error alert — check it out!
+</Alert>}
+
 alert("create user")
 
    };

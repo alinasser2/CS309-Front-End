@@ -23,7 +23,7 @@ const Login = (props) => {
                 <h3> password</h3>
                 </label>
                 <input value={pass} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password" name="password"   required minLength={5} maxLength={10}/>
-                <Button variant="contained" type="submit">Log In</Button>
+                <button  type="submit">Log In</button>
             </form>
         </div>
     )

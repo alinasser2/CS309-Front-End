@@ -9,20 +9,15 @@ import {
   useMediaQuery,
   useTheme,alpha,Menu,MenuItem
 } from "@mui/material";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCartSharp';
 import Mobile from "./menuMobile";
-import logo from './Assts/logo.png'
+import logo from './Assts/logo.png';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import Tooltip from '@mui/material/Tooltip';
-import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 import ReorderSharpIcon from '@mui/icons-material/ReorderSharp';
-import MenuIcon from '@mui/icons-material/Menu';
 import './NavBar.css'
-import { Link } from 'react-router-dom';
-const settings=[{title:'Products',id:"./"},{title:'REGISTER',id:"./REGISTER"},{title:'LOGIN',id:"./LOGIN"},{title:'About',id:"./About"}];
-// ['Products','REGISTER','LOGIN','About'];
-// const hj=['./'];
+const settings=[{title:'Products',id:"./ProductList"},{title:'Register',id:"./Register"},{title:'Login',id:"./Login"},{title:'About',id:"./About"}];
+
 const Logo=styled('img')(()=>({
   width:'5rem',
   minWidth:'5rem'
@@ -34,12 +29,12 @@ const Logo=styled('img')(()=>({
     '&:hover': {
       backgroundColor: alpha(theme.palette.common.white, 0.35),
     },
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(0),
     marginLeft: 0,
     width: '100%',
     minWidth:'300px',
     [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(-230),
+      marginLeft: theme.spacing(-175),
       width: 'auto',
     },
   }));
@@ -67,7 +62,7 @@ const Logo=styled('img')(()=>({
     },
   }));
   const Header = () => {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(0);
   const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -112,14 +107,14 @@ const Logo=styled('img')(()=>({
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
-               <a href="./" >
+               <a href="./ProductList" >
                  < Tab className="links" label="Procects"  />
                  </a>
-                 <a href="./REGISTER" >
-                <Tab className="links" label="REGISTER" />
+                 <a href="./Register" >
+                <Tab className="links" label="Register" />
                 </a>
-                <a href="./login" >
-                <Tab className="links" label="LOGIN" />
+                <a href="./Login" >
+                <Tab className="links" label="Login" />
                 </a>
                 <a href="./About" >
                 <Tab className="links" label="About" />

@@ -8,7 +8,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-const pages=[{title:'Products',id:"./"},{title:'REGISTER',id:"./REGISTER"},{title:'LOGIN',id:"./LOGIN"},{title:'About',id:"./About"}];
+const pages=[{title:'Products',id:"./ProductList"},{title:'Register',id:"./Register"},{title:'Login',id:"./Login"},{title:'About',id:"./About"}];
 const Mobile = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 

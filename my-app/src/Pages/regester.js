@@ -70,7 +70,7 @@ return (
             <Input label="phone" type="Number"  inputName="phone" data={data}   errors={errors} handleChange={handlephone} placeholder="phone" required  />
             <Input label="city "  inputName="city" data={data}   errors={errors} handleChange={handlecity} placeholder="city " required />
             <Input label="state"inputName="state" data={data}   errors={errors} handleChange={handlestate} placeholder="state" required />
-            <Button variant="contained" type="submit">Log In</Button>
+            <button  type="submit">Log In</button>
        </form>
       
    </div>

@@ -11,6 +11,7 @@ function Post({imgURL ,painte_name , price,handleClick,handleAdd,...rest}) {
     <CardActionArea > 
      <Link to={handleClick}>
       <CardMedia
+      style={{marginTop:"90px"}}
         component="img"
         height="20%"
         image="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"

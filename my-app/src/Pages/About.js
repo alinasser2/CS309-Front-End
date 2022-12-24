@@ -5,7 +5,7 @@ import { makeStyles} from '@mui/styles';
 
 const useStayle = makeStyles({
     Bady:{
-         background : "Linear-gradient(#264653,#2a9d8f,#2a9d8f,#e9c46a,#e9c46a,#f4a261,#f4a261,#e76f51)",
+         background : "Linear-gradient(564deg, rgb(255 218 28), rgb(141 244 84), rgb(46, 196, 182))",
     },
     About:{
        
@@ -31,7 +31,7 @@ const useStayle = makeStyles({
 function About() {
  const  stayles = useStayle()
   return (
-    <main>
+    
         <div className={stayles.Bady}>
     <CssBaseline/>
       <Grid container justify="center"  >
@@ -91,7 +91,7 @@ function About() {
         </Container>
       </Grid>
       </div>
-    </main>
+   
   );
 }
 

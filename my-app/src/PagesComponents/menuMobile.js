@@ -8,8 +8,8 @@ import {
   ListItemText,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-const pages=[{title:'Products',id:"./Products"},{title:'REGISTER',id:"./REGISTER"},{title:'LOGIN',id:"./LOGIN"},{title:'About',id:"./About"}];
-const mobile = () => {
+const pages=[{title:'Products',id:"./"},{title:'REGISTER',id:"./REGISTER"},{title:'LOGIN',id:"./LOGIN"},{title:'About',id:"./About"}];
+const Mobile = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
@@ -44,4 +44,4 @@ const mobile = () => {
   );
 };
 
-export default mobile;
+export default Mobile;

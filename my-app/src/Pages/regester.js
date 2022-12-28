@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
 import  Input  from '../components/Input';
-import {Button,Alert} from '@mui/material';
+
 
 const Register = (props) => {
-const apiurl='https://jsonplaceholder.typicode.com/users';
+
 
    const[data,setData]= useState({
     username:'',
@@ -17,59 +17,52 @@ const apiurl='https://jsonplaceholder.typicode.com/users';
 
  });
 
- const[errors,setErrors]= useState({});
 
-   const  handleSubmit =async e => {  
+
+
+   const handleChange = (e) => {
+    const value = e.target.value;
+    setData({
+      ...data,
+      [e.target.name]: value
+    });
+  };
+
+  const handleSubmit = (e) => {
+
     e.preventDefault();
-
-
     if(data.password !==data.confirm_password)  return alert("password didn't match"); 
-   const response = await axios.post(apiurl,data.email,data.password,data.confirm_password,data.username);
-console.log("the name is: " + data.username+"\n  and the password is: " + data.password+" \n and the confirm password is: " + data.confirm_password+"\n  and the email is: " + data.email+"\n  and the phone is: " + data.phone+"\n  and the city is: " + data.city+"\n  and the state is: " + data.state)
+    const userData = {
+        username: data.username,
+        email: data.email,
+        password:data.password,
+        phone_number:data.phone,
+        city:data.city,
+        state:data.state
+    };
+    axios
+      .post("http://localhost:3001/api/auth/signup", userData)
+      .then((response) => {
+        console.log(response.status);
+        console.log(response.data.message);
+      
 
-{<Alert variant="filled" severity="error">
-  This is an error alert — check it out!
-</Alert>}
+        alert(response.data.message)
+      })
 
-alert("create user")
-
-   };
-
-   const handleUserName=({target})=>{
-    setData({...data,[target.name]:target.value});
-};
-
-   const handleEmail=({target})=>{
-    setData({...data,[target.name]:target.value});
-};
-const handlePassword1=({target})=>{
-    setData({...data,[target.name]:target.value});
-};
-const handlePassword2=({target})=>{
-    setData({...data,[target.name]:target.value});
-};  
-const handlephone=({target})=>{   
-    setData({...data,[target.name]:target.value});
-    
-};  
-const handlecity=({target})=>{
-    setData({...data,[target.name]:target.value});
-};  
-const handlestate=({target})=>{
-    setData({...data,[target.name]:target.value});
-};  
+  };
 
 return (
        <div className="component">
            <h2>Register</h2>
             <form className="register-form" onSubmit={handleSubmit}>
-            <Input label="Username"  inputName="username" data={data} errors={errors} handleChange={handleUserName} placeholder="Username" required  />
-            <Input label="Password" type="Password" inputName="password" data={data}  errors={errors} handleChange={handlePassword1} placeholder="Password" required minLength={8}/>
-            <Input label="Confirm Password" type="Password" inputName="confirm_password" data={data}   errors={errors} handleChange={handlePassword2} placeholder="Confirm password" required minLength={8}/>  
-            <Input label="Email"  type="email" inputName="email" data={data}  errors={errors} handleChange={handleEmail} placeholder="youremail@gmail.com" required />
-            <Input label="phone" type="Number"  inputName="phone" data={data}   errors={errors} handleChange={handlephone} placeholder="phone" required  />
-            <Input label="city "  inputName="city" data={data}   errors={errors} handleChange={handlecity} placeholder="city " required />
-            <Input label="state"inputName="state" data={data}   errors={errors} handleChange={handlestate} placeholder="state" required />
+            <Input label="Username"  inputName="username" data={data}  handleChange={handleChange} placeholder="Username" required  />
+            <Input label="Password" type="Password" inputName="password" data={data}   handleChange={handleChange} placeholder="Password" required minLength={8}/>
+            <Input label="Confirm Password" type="Password" inputName="confirm_password" data={data}    handleChange={handleChange} placeholder="Confirm password" required minLength={8}/>  
+            <Input label="Email"  type="email" inputName="email" data={data}   handleChange={handleChange} placeholder="youremail@gmail.com" required />
+            <Input label="phone" type="Number"  inputName="phone" data={data}    handleChange={handleChange} placeholder="phone" required  />
+            <Input label="city "  inputName="city" data={data}    handleChange={handleChange} placeholder="city " required />
+            <Input label="state"inputName="state" data={data}    handleChange={handleChange} placeholder="state" required />
             <button  type="submit">Log In</button>
        </form>
       

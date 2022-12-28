@@ -8,7 +8,7 @@ import StarIcon from '@mui/icons-material/Star';
 const useStayle = makeStyles({
   Bady: {
     background:
-      "Linear-gradient(564deg, rgb(255 218 28), rgb(141 244 84), rgb(46, 196, 182))",
+      "#F2E7D5",
   },
 });
 
@@ -38,10 +38,9 @@ function Product() {
   const [hover, setHover] =useState(-1);
 
   useEffect(()=>{
-    setProductName("nnnnn");
-    setPaice(989999);
-    setDescription("hhjfhgcgfxgfx");
-    console.log(value)
+    setProductName("ArtPAding");
+    setPaice(999.99+"$");
+    setDescription("is very good");
   return()=>{
   };
   },[value]);
@@ -52,27 +51,27 @@ function Product() {
   return (
     <div className={stayles.Bady}>
        <CssBaseline/>
-      <Grid container justify="center">
+      <Grid>
       <Container>
       <CardMedia
-      style={{marginTop:"90px"}}
+      style={{marginTop:"90px" ,width: "25%",height:"50%"}}
         component="img"
-        height="50%"
+    
         image="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    
         alt={ProductName}
     
         />
-         <Typography variant="h2" align="left" >
+         <Typography fontSize="25px" align="center" marginTop="-6rem" >
             {ProductName}
           </Typography>
-        <Typography variant="h3" align="left" >
+        <Typography fontSize="25px" align="center" >
             {Paice}
           </Typography>
-        <Typography variant="h4" align="left" >
+        <Typography fontSize="25px" align="center" >
             {Description}
           </Typography>
-        <Typography variant="h4" align="left" >
-            {id}
+        <Typography fontSize="25px" align="left" >
           </Typography>
        
        
@@ -80,9 +79,9 @@ function Product() {
           label="Comment "
           multiline
           rows={9}
-   
+       style={{marginLeft: '1% ',marginTop: '10%',width:'50%' }}
         />
-       <Rating value={value} size="large" precision={0.5} 
+       <Rating value={value} size="large"  precision={0.5} style={{marginLeft:"-530px"}}
          getLabelText={getLabelText}
         onChange={(event, newValue) => {
           setValue(newValue);
@@ -90,7 +89,7 @@ function Product() {
         onChangeActive={(event, newHover) => {
           setHover(newHover);
         }}
-        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}/>
+        emptyIcon={<StarIcon style={{ opacity: 50 }} fontSize="inherit" />}/>
        {value !== null && (
         <Box >{labels[hover !== -1 ? hover : value]}</Box>
       )}

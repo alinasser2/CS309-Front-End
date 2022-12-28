@@ -1,37 +1,40 @@
+
 .App {
   text-align: center;
   display: flex;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  color: white;
-  background-image: wheat
+  color: rgb(207, 22, 22);
+  background-image: rgb(0, 0, 0)
 }
 
  .login-form {
   display: inline-grid;
   padding: 3rem;
   flex-direction: row;
-background:linear-gradient(564deg, rgb(255 218 28), rgb(141 244 84), rgb(46, 196, 182));
+background:#6D9886;
 }
 .register-form {
   display: inline-grid;
   padding: 2rem;
   flex-direction: row;
-background:linear-gradient(564deg, rgb(255 218 28), rgb(141 244 84), rgb(46, 196, 182));
+background:#6D9886;
+/* linear-gradient(564deg, rgb(255 218 28), rgb(141 244 84), rgb(46, 196, 182)); */
 }
 @media screen and (min-width: 600px) {
   .component {
     display: inline-grid;
     flex-direction: row;
-  background:linear-gradient(564deg, rgb(255 218 28), rgb(141 244 84), rgb(46, 196, 182));
+  background:#6D9886;
   padding: 2rem;
+  /* border: 300px solid white; */
+    border-radius: 10%;
+    margin-top:6rem;
+    margin-left: 33rem;
+    /* margin-right: 50rem; */
+
   
-  border: 300px solid white;
-    border-radius: 348px;
-    margin-top: -8rem;
-    margin-left: 10rem;
-    margin-right: 50rem;
   }
 }
 

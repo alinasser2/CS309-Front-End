@@ -1,12 +1,13 @@
 import React from "react";
 import {BrowserRouter,Route,Routes,Link} from 'react-router-dom';
-import Register from './Pages/Regester'
-import Login  from './Pages/Login'
+import Register from './Pages/regester'
+import Login  from './Pages/login'
 import Home from './Pages/Home'
 import About from './Pages/About' 
 import ProductList from "./Pages/ProductList";
 import Product from "./Pages/Product";
 import Header from './PagesComponents/NavBar'
+import CartItem from './Pages/CartItem'
 import './App.css'
 function App() {
   
@@ -20,10 +21,17 @@ function App() {
    
    <Route  excet path="/" element={<Home/>} />
     <Route  path="/Login" element={<Login/>} />
+    <Route  path="Product/Login" element={<Login/>} />
     <Route path="/Register" element={<Register/>} />  
+    <Route path="Product/Register" element={<Register/>} /> 
     <Route path="/About" element={<About/>} />  
+    <Route path="Product/About" element={<About/>} />  
     <Route path="/ProductList" element={<ProductList/>} />  
+    <Route path="Product/ProductList" element={<ProductList/>} />
+    {/* <Route  path="/Product" element={<ProductList/>} />   */}
     <Route  path="/Product/:id" element={<Product/>} />  
+    <Route  path="/CartItem" element={<CartItem/>} /> 
+    <Route  path="Product/CartItem" element={<CartItem/>} /> 
     {/* <Route path="/Register" element={<Register/>} />  
     <Route path="/Register" element={<Register/>} />   */}
          </Routes>

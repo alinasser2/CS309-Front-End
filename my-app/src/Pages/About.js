@@ -5,8 +5,9 @@ import { makeStyles} from '@mui/styles';
 
 const useStayle = makeStyles({
     Bady:{
-         background : "Linear-gradient(564deg, rgb(255 218 28), rgb(141 244 84), rgb(46, 196, 182))",
-    },
+         background : "#F2E7D5",
+    marginTop:"110px"
+        },
     About:{
        
 
@@ -36,18 +37,18 @@ function About() {
     <CssBaseline/>
       <Grid container justify="center"  >
         <Container  >
-          <Typography variant="h2" align="center"  className={stayles.About}>
+          <Typography variant="h2" align="center" style={{background:"burlywood"}}  className={stayles.About}>
             ABOUT US
           </Typography>
           <div  className={stayles.About_con}>
-          <Typography variant="h5" align="left">
+          <Typography variant="h4" align="left">
             What this site for ?
           </Typography>
           <Typography variant="h6" align="left">
             This site made to people with passion to Art to make buing painting
             Easier for them
           </Typography>
-          <Typography variant="h5" align="left">
+          <Typography variant="h4" align="left">
             who made this site ?
           </Typography>
           <Typography variant="h6" align="left">
@@ -56,11 +57,11 @@ function About() {
           </div>
         </Container>
         <Container >
-          <Typography variant="h2" align="center"className={stayles.Contact}>
+          <Typography variant="h2" align="center" style={{background:"burlywood"}} className={stayles.Contact}>
             CONTACT US
           </Typography>
           <div  className={stayles.Contact_con}>
-          <Typography variant="h5">Emails :</Typography>
+          <Typography variant="h4">Emails :</Typography>
           <Typography variant="h6" align="left">
              Mounirmageddg@gmail.com
           </Typography>
@@ -74,7 +75,7 @@ function About() {
             Mounirmageddg@gmail.com
           </Typography> 
 
-          <Typography variant="h5">Phone Number :</Typography>
+          <Typography variant="h4">Phone Number :</Typography>
           <Typography variant="h6" align="left">
             2002-274-13
           </Typography>

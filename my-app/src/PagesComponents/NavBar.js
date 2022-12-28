@@ -34,7 +34,7 @@ const Logo=styled('img')(()=>({
     width: '100%',
     minWidth:'300px',
     [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(-175),
+      marginLeft: theme.spacing(-192),
       width: 'auto',
     },
   }));
@@ -62,7 +62,7 @@ const Logo=styled('img')(()=>({
     },
   }));
   const Header = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(-1);
   const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -87,10 +87,11 @@ const Logo=styled('img')(()=>({
 
   return (
     <React.Fragment>
-      <AppBar sx={{ background: '#00b4d8', height:'79px'}}>
+      <AppBar sx={{ background: '#393E46', height:'75px'}}>
         <Toolbar>
+       <a href="/">
         <Logo src={logo} />
-       
+        </a>
           {isMatch ? (
             <>
               <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
@@ -101,7 +102,7 @@ const Logo=styled('img')(()=>({
           ) : (
             <>
               <Tabs
-                sx={{ marginLeft: "70%" }}
+                sx={{ marginLeft: "65%"  }}
                 indicatorColor="secondary"
                 textColor="inherit"
                 value={value}
@@ -131,6 +132,7 @@ const Logo=styled('img')(()=>({
             </IconButton>
           
           </Box> */}
+           <a href="./CartItem" >
           <Button
             style={{ width: "3rem", height: "3rem", position: "relative" }}
             variant="outline-primary"
@@ -156,9 +158,10 @@ const Logo=styled('img')(()=>({
                 transform: "translate(25%, 25%)",
               }}
             >
-              {5}
+          
             </div>
           </Button>
+          </a>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 1}} style={{color:'white'}}>

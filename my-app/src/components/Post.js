@@ -2,7 +2,15 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import { Typography, Grid, CssBaseline, Container, link, Card, CardActionArea, CardMedia, CardContent,Button,CardActions } from "@mui/material";
 import { makeStyles} from '@mui/styles';
-function Post({imgURL ,painte_name , price,handleClick,handleAdd,...rest}) {
+import useShoppingCart from '../Pages/ShoppingCart'
+function Post({imgURL ,painte_name , id,price,handleClick,handleAdd,...rest}) {
+  const {
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart
+  } = useShoppingCart();
+  const quantity = getItemQuantity(id);
   return (
     <>
 
@@ -24,12 +32,26 @@ function Post({imgURL ,painte_name , price,handleClick,handleAdd,...rest}) {
          {painte_name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-         price  {price}
+         price  {price+"$"}
         </Typography>
    </CardContent>
     </CardActionArea>
       <CardActions>      
-      <Button size="small"   onClick={handleAdd}>Add product to Card</Button>   
+      <div>
+      {quantity===0? <Button style={{width:"200%" ,color:"black"}} onClick={()=>increaseCartQuantity(id)}>Add product to Card</Button>:
+      <div style={{display:"grid"}}>
+<div style={{display:"flex"}}>
+<Button variant="outlined"style={{width:"90px",height:"50px",marginTop:"20px",marginLeft:"0px",marginBottom:"2px" ,fontSize:"25px",color:"black" }} onClick={()=>decreaseCartQuantity(id)}>-</Button>
+<span style={{fontSize:"25px",marginTop:"20px",marginRight:"7px",marginLeft:"7px" ,color:"black"}}>{quantity} in cart</span>
+<Button variant="outlined" style={{width:"90px",height:"50px",marginTop:"20px",marginLeft:"1px",marginBottom:"2px",fontSize:"25px",color:"black" }} onClick={()=>increaseCartQuantity(id)}>+</Button>
+</div>
+<Button variant="outlined" style={{color:"black" }} onClick={()=>removeFromCart(id)}>Remove</Button>
+
+      </div>
+      
+      }
+     </div>
+       
     </CardActions>
   </Card>
   </>

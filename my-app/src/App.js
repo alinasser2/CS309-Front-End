@@ -5,6 +5,7 @@ import Login  from './Pages/login'
 import Home from './Pages/Home'
 import About from './Pages/About' 
 import ProductList from "./Pages/ProductList";
+import UsersList from "./Pages/UsersList";
 import Product from "./Pages/Product";
 import Header from './PagesComponents/NavBar'
 import CartItem from './Pages/CartItem'
@@ -28,7 +29,7 @@ function App() {
     <Route path="Product/About" element={<About/>} />  
     <Route path="/ProductList" element={<ProductList/>} />  
     <Route path="Product/ProductList" element={<ProductList/>} />
-    {/* <Route  path="/Product" element={<ProductList/>} />   */}
+    <Route  path="/UsersList" element={<UsersList/>} />  
     <Route  path="/Product/:id" element={<Product/>} />  
     <Route  path="/CartItem" element={<CartItem/>} /> 
     <Route  path="Product/CartItem" element={<CartItem/>} /> 

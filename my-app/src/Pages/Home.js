@@ -1,5 +1,6 @@
 import React ,{useState, useEffect }from "react";
 import Post from "../components/Post";
+import Banner from "../PagesComponents/Banner"
 import {
   Typography,
   Grid,
@@ -31,10 +32,11 @@ function Home() {
   return (
     <Container>
       <CssBaseline/>
+      <Banner/>
       <Grid container spacing={2}>
-      {num.map(idP=>(
-        <Grid item sm={6} xs={12} md={4}>
-        <Post painte_name="mounir" price="10000" handleClick={`/Product/${idP.id}`} handleAdd={handleAddProduct} />
+      {num.map((idP,i)=>(
+        <Grid key={i}item sm={6} xs={12} md={4}>
+        <Post  key={i}painte_name="mounir" price="10000" handleClick={`/Product/${idP.id}`} handleAdd={handleAddProduct} />
         </Grid>
     ))}
         <Grid item xs={12}>

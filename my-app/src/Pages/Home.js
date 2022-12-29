@@ -1,6 +1,6 @@
-import React ,{useState, useEffect }from "react";
+import React, { useState, useEffect } from "react";
 import Post from "../components/Post";
-import Banner from "../PagesComponents/Banner"
+import Banner from "../PagesComponents/Banner";
 import {
   Typography,
   Grid,
@@ -15,33 +15,47 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 function Home() {
-
   const Url = "";
-  const [num,setNum]=useState([]);
+  const [num, setNum] = useState([]);
 
-  const use=[{id:1},{id:2},{id:3},{id:4},{id:5},{id:6},{id:7},{id:8},{id:9},{id:10},{id:11}]
-  useEffect(()=>{
+  const use = [
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 },
+    { id: 6 },
+    { id: 7 },
+    { id: 8 },
+    { id: 9 },
+    { id: 10 },
+    { id: 11 },
+  ];
+  useEffect(() => {
     setNum(use);
-  return()=>{
-  };
-  },[]);
+    return () => {};
+  }, []);
 
-  let handleAddProduct = () => {
-
-  };
+  let handleAddProduct = () => {};
   return (
     <Container>
-      <CssBaseline/>
-      <Banner/>
+      <CssBaseline />
+      <Banner />
       <Grid container spacing={2}>
-      {num.map((idP,i)=>(
-        <Grid key={i}item sm={6} xs={12} md={4}>
-        <Post  key={i}painte_name="The Scream" price="10000" handleClick={`/Product/${idP.id}`} handleAdd={handleAddProduct} />
-        </Grid>
-    ))}
+        {num.map((idP, i) => (
+          <Grid key={i} item sm={6} xs={12} md={4}>
+            <Post
+              key={i}
+              painte_name="Starry Night"
+              price="10000"
+              handleClick={`/Product/${idP.id}`}
+              handleAdd={handleAddProduct}
+            />
+          </Grid>
+        ))}
         <Grid item xs={12}>
           <Button variant="contained" href="/ProductList">
-           View More Products
+            View More Products
           </Button>
         </Grid>
       </Grid>

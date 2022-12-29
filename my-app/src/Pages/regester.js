@@ -41,7 +41,7 @@ const Register = (props) => {
         state:data.state
     };
     axios
-      .post("http://localhost:3001/api/auth/signup", userData)
+      .post("http://localhost:3000/api/auth/signup", userData)
       .then((response) => {
         console.log(response.status);
         console.log(response.data.message);

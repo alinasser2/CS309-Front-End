@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import { Typography, Grid, CssBaseline, Container, link, Card, CardActionArea, CardMedia, CardContent,Button,CardActions } from "@mui/material";
-import { makeStyles} from '@mui/styles';
+
 import useShoppingCart from '../Pages/ShoppingCart'
 function Post({imgURL ,painte_name , id,price,handleClick,handleAdd,...rest}) {
   const {

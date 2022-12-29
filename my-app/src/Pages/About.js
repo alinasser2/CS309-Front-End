@@ -1,46 +1,21 @@
 import React from "react";
 import { Typography, Grid, CssBaseline, Container, link } from "@mui/material";
-import { makeStyles} from '@mui/styles';
 
 
-const useStayle = makeStyles({
-    Bady:{
-         background : "#F2E7D5",
-    marginTop:"110px"
-        },
-    About:{
-       
 
-    },
-    About_con:{
 
-        
-
-    },
-    Contact:{
-
-       
-
-    },
-    Contact_con:{
-
-      
-
-    },
-
-}) ;
 function About() {
- const  stayles = useStayle()
+
   return (
     
-        <div className={stayles.Bady}>
+        <div className={""}>
     <CssBaseline/>
       <Grid container justify="center"  >
         <Container  >
-          <Typography variant="h2" align="center" style={{background:"burlywood"}}  className={stayles.About}>
+          <Typography variant="h2" align="center" style={{background:"burlywood"}}  className={""}>
             ABOUT US
           </Typography>
-          <div  className={stayles.About_con}>
+          <div  className={""}>
           <Typography variant="h4" align="left">
             What this site for ?
           </Typography>
@@ -57,10 +32,10 @@ function About() {
           </div>
         </Container>
         <Container >
-          <Typography variant="h2" align="center" style={{background:"burlywood"}} className={stayles.Contact}>
+          <Typography variant="h2" align="center" style={{background:"burlywood"}} className={""}>
             CONTACT US
           </Typography>
-          <div  className={stayles.Contact_con}>
+          <div  className={""}>
           <Typography variant="h4">Emails :</Typography>
           <Typography variant="h6" align="left">
              Mounirmageddg@gmail.com

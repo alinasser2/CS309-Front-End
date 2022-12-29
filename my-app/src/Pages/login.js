@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Cookie from 'js-cookie'
+import stringify from "json-stringify"
 const Login = () => {
     const [data, setData] = useState({
       email: "",
@@ -21,10 +23,13 @@ const Login = () => {
         password: data.password
       };
       axios
-        .post("http://localhost:3001/api/auth/login", userData)
+        .post("http://localhost:3000/api/auth/login", userData)
         .then((response) => {
           console.log(response.status);
           console.log(response.data.message);
+          console.log(response.data.Token);
+
+          Cookie.set("SavedToken",  response.data.Token, {expires:1, secure:true, sameSite: "strict", path:"/"});
         })
 
     };

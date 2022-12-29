@@ -1,16 +1,11 @@
 import React, { useState, component, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Typography, Grid, CssBaseline, Container, Box, CardMedia,Rating ,TextField } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+
 import StarIcon from '@mui/icons-material/Star';
 
 
-const useStayle = makeStyles({
-  Bady: {
-    background:
-      "#F2E7D5",
-  },
-});
+
 
 const labels = {
   0.5: 'Useless',
@@ -29,7 +24,7 @@ function getLabelText(value) {
 }
 function Product() {
 
-  const stayles = useStayle();
+ 
   const { id } = useParams();
   const [ProductName,setProductName]=useState([]);
   const [Paice,setPaice]=useState([]);
@@ -49,7 +44,7 @@ function Product() {
 
 
   return (
-    <div className={stayles.Bady}>
+    <div className={""}>
        <CssBaseline/>
       <Grid>
       <Container>

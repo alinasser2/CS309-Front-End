@@ -9,6 +9,7 @@ import UsersList from "./Pages/UsersList";
 import Product from "./Pages/Product";
 import AdminProduct from "./Pages/AdminProduct";
 import Header from './PagesComponents/NavBar'
+import Footer from './PagesComponents/Footer'
 import CartItem from './Pages/CartItem'
 import './App.css'
 function App() {
@@ -37,6 +38,7 @@ function App() {
     <Route path="/EditProduct" element={<AdminProduct/>} />  
     {/* <Route path="/Register" element={<Register/>} />   */}
          </Routes>
+         <Footer/>
   </BrowserRouter> 
  
   );

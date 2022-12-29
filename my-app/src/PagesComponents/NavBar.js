@@ -16,7 +16,9 @@ import InputBase from '@mui/material/InputBase';
 import Tooltip from '@mui/material/Tooltip';
 import ReorderSharpIcon from '@mui/icons-material/ReorderSharp';
 import './NavBar.css'
-const settings=[{title:'Products',id:"./ProductList"},{title:'Register',id:"./Register"},{title:'Login',id:"./Login"},{title:'About',id:"./About"}];
+import {Link} from 'react-router-dom';
+
+const settings=[{title:'Products',id:"./ProductList"},{title:'Register',id:"./Register"},{title:'Login',id:"./Login"},{title:'About',id:"./About"},{title:'UsersList',id:"./UsersList"}];
 
 const Logo=styled('img')(()=>({
   width:'5rem',
@@ -120,7 +122,11 @@ const Logo=styled('img')(()=>({
                 <a href="./About" >
                 <Tab className="links" label="About" />
                 </a>
-                
+                if(1===2){
+                <a href="./UsersList">
+                <Tab className="links" label="UsersList" />
+                </a>
+                   }
               </Tabs>
             
          {/* <Box sx={ {marginLeft: "1" } }>

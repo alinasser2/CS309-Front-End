@@ -7,6 +7,7 @@ import About from './Pages/About'
 import ProductList from "./Pages/ProductList";
 import UsersList from "./Pages/UsersList";
 import Product from "./Pages/Product";
+import AdminProduct from "./Pages/AdminProduct";
 import Header from './PagesComponents/NavBar'
 import CartItem from './Pages/CartItem'
 import './App.css'
@@ -33,8 +34,8 @@ function App() {
     <Route  path="/Product/:id" element={<Product/>} />  
     <Route  path="/CartItem" element={<CartItem/>} /> 
     <Route  path="Product/CartItem" element={<CartItem/>} /> 
-    {/* <Route path="/Register" element={<Register/>} />  
-    <Route path="/Register" element={<Register/>} />   */}
+    <Route path="/EditProduct" element={<AdminProduct/>} />  
+    {/* <Route path="/Register" element={<Register/>} />   */}
          </Routes>
   </BrowserRouter> 
  

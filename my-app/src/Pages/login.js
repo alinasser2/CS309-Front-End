@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Cookie from 'js-cookie'
 import stringify from "json-stringify"
+import {Link} from 'react-router-dom';
 const Login = () => {
     const [data, setData] = useState({
       email: "",
@@ -35,19 +36,21 @@ const Login = () => {
     };
   
     return (
-        <div classemail="component">
+        <div className="component">
                     <h2>Login</h2>
-                       <form classemail="login-form" onSubmit={handleSubmit}>
-                        <label classemail="email">
+                       <form className="login-form" onSubmit={handleSubmit}>
+                        <label className="email">
                              <h3> Email</h3>
                                </label>
                           <input value={data.email}  name="email"onChange={handleChange}type="email" placeholder="youremail@gmail.com"  email="email" required minLength={13} maxLength={25}/>
-                         <label classemail="password">
+                         <label className="password">
                            <h3> password</h3>
                          </label>
                           <input  value={data.password}    name="password" onChange={handleChange} type="password" placeholder="password" email="password"   required minLength={5} maxLength={10}/>
                           <button  type="submit">Log In</button>
+                    
                      </form>
+                       
                   </div>
 
     );

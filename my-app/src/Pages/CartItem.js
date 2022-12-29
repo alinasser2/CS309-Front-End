@@ -4,7 +4,7 @@ import storeItems from "../Data/items.json";
 import {Button} from "@mui/material";
 
 
-function CartItem ({ id=3, quantity=2}) {
+function CartItem ({ id=3, quantity=3}) {
 console.log(id,quantity);
   const { removeFromCart } = useShoppingCart();
   const item = storeItems.find((item) => item.id === id);

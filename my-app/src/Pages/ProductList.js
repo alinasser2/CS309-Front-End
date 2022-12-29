@@ -33,7 +33,7 @@ return()=>{
       <Grid container spacing={2}>
        {num.map((idP,i)=>(
         <Grid key={i} item sm={6} xs={12} md={4}>
-        <Post key={i} painte_name="mounir" price="10000" handleClick={`/Product/${idP.id}`} handleAdd={handleAddProduct} />
+        <Post key={i} painte_name="The Scream" price="10000" handleClick={`/Product/${idP.id}`} handleAdd={handleAddProduct} />
         </Grid>
     ))}
       </Grid>

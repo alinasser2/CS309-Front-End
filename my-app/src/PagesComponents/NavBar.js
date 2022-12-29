@@ -18,7 +18,14 @@ import ReorderSharpIcon from '@mui/icons-material/ReorderSharp';
 import './NavBar.css'
 import {Link} from 'react-router-dom';
 
-const settings=[{title:'Products',id:"./ProductList"},{title:'Register',id:"./Register"},{title:'Login',id:"./Login"},{title:'About',id:"./About"},{title:'UsersList',id:"./UsersList"}];
+let settings=[{title:'Products',id:"./ProductList"},{title:'Register',id:"./Register"},{title:'Login',id:"./Login"},{title:'About',id:"./About"}];
+if('admin'==='admin'){
+  settings=[{title:'Product',id:"./EditProduct"},{title:'About',id:"./About"},{title:'UsersList',id:"./UsersList"}];
+}
+if('response.data.message'==="User logged In"){
+  settings=[{title:'Products',id:"./ProductList"},{title:'About',id:"./About"},{title:'UsersList',id:"./UsersList"},{title:'Account',id:"./Account"}];
+ }
+
 
 const Logo=styled('img')(()=>({
   width:'5rem',

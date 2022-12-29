@@ -14,19 +14,21 @@ console.log(id,quantity);
       <img
         src={item.imgUrl}
         alt="cart-img"
+      style={{width:300,height:300,marginTop:80}}
       />
       <div >
-        <div>
+        <div style={{fontSize:30}}>
           {item.name}
+          
           {quantity > 1 && (
             <span> x{quantity}</span>
           )}
         </div>
-        <div>
+        <div style={{fontSize:30}}>
           {item.price+"$"}
         </div>
       </div>
-      <div>{"TOTAL:"+item.price * quantity+"$"}</div>
+      <div style={{fontSize:30}}>{"TOTAL:"+item.price * quantity+"$"}</div>
       <Button
         variant="outline-danger"
         size="sm"

@@ -22,7 +22,7 @@ function Post({imgURL ,painte_name , id,price,handleClick,handleAdd,...rest}) {
       style={{marginTop:"90px"}}
         component="img"
         height="20%"
-        image="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        image="https://sep.yimg.com/ty/cdn/madisonartshop/most-famous-paintings-2.jpg?t=1660737943&"
         alt={painte_name}
     
         />

@@ -36,7 +36,7 @@ const Logo=styled('img')(()=>({
     width: '100%',
     minWidth:'300px',
     [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(-192),
+      marginLeft: theme.spacing(-235),
       width: 'auto',
     },
   }));

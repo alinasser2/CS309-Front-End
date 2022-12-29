@@ -12,7 +12,7 @@ function About() {
     <CssBaseline/>
       <Grid container justify="center"  >
         <Container  >
-          <Typography variant="h2" align="center" style={{background:"burlywood"}}  className={""}>
+          <Typography variant="h2" align="center" style={{background:"burlywood",marginTop:"90px"}}  className={""}>
             ABOUT US
           </Typography>
           <div  className={""}>

@@ -24,8 +24,8 @@ if('response.data.message'==="User logged In"){
  }
 
   return (
-<Container>
-     <h3>important links </h3>
+<Container style={{marginLeft:30}}>
+     <h3 style={{background:"#E5BA73",width:"150px"}}>important links </h3>
 {pages.map((page, index) => (
             
             <li>
@@ -33,7 +33,7 @@ if('response.data.message'==="User logged In"){
              {page.title}
                 </Link></li>
                 ))}
-               <p>Copyright © 309 2022.</p>
+              
 </Container>
   )
 }

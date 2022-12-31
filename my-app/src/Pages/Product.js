@@ -38,7 +38,7 @@ function Product() {
 
   useEffect(() => {
     setProductName("ArtPAding");
-    setPaice(999.99 + "$");
+    setPaice(1000 + "$");
     setDescription("is very good");
     return () => {};
   }, [value]);
@@ -51,7 +51,7 @@ function Product() {
           <CardMedia
             style={{ marginTop: "90px", width: "25%", height: "50%" }}
             component="img"
-            image="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            image="https://sep.yimg.com/ty/cdn/madisonartshop/most-famous-paintings-2.jpg?t=1660737943&"
             alt={ProductName}
           />
           <Typography fontSize="25px" align="center" marginTop="-6rem">

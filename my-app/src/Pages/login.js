@@ -29,12 +29,13 @@ const Login = () => {
         console.log(response.status);
         console.log(response.data.message);
         console.log(response.data.Token);
-
+        alert(response.data.message);
+        alert(response.data.Token);
         Cookie.set("SavedToken", response.data.Token, {
           expires: 1,
           secure: true,
           sameSite: "strict",
-          path: "/",
+          path: "/CS309-Front-End/",
         });
       });
   };

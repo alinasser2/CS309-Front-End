@@ -54,7 +54,7 @@ function ProductList() {
             <Post
               key={i}
               painte_name="Starry Night"
-              price="90000"
+              price="1000"
               handleClick={`/Product/${idP.id}`}
               handleAdd={handleAddProduct}
             />

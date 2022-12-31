@@ -36,18 +36,18 @@ function Footer() {
   }
 
   return (
-    <Container style={{ marginLeft: 30 }}>
-      <h3 style={{ background: "#E5BA73", width: "150px" }}>
+    <Container style={{ marginLeft: 350}}>
+      <h3 style={{ background: "#E5BA73", width: "150px" ,marginTop:"100px"}}>
         important links{" "}
       </h3>
-      {pages.map((page, index) => (
-        <li>
-          <Link key={index} to={page.id} style={{ color: "black" }}>
+      {pages.map((page, i) => (
+        <li key={i} >
+          <Link key={i} to={page.id} style={{ color: "black" }}>
             {page.title}
           </Link>
         </li>
       ))}
-      <p>Copyright © 309 2022.</p>
+      <p style={{marginLeft:600}}>Copyright © 309 2022.</p>
     </Container>
   );
 }

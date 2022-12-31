@@ -11,24 +11,24 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 
 let pages = [
-  { title: "Products", id: "./ProductList" },
-  { title: "Register", id: "./Register" },
-  { title: "Login", id: "./Login" },
-  { title: "About", id: "./About" },
+  { title: "Products", id: "./CS309-Front-End/ProductList" },
+  { title: "Register", id: "./CS309-Front-End/Register" },
+  { title: "Login", id: "./CS309-Front-End/Login" },
+  { title: "About", id: "./CS309-Front-End/About" },
 ];
-if ("admin" === "admisn") {
+if ("admin" === "admin") {
   pages = [
-    { title: "Product", id: "./EditProduct" },
-    { title: "About", id: "./About" },
-    { title: "UsersList", id: "./UsersList" },
+    { title: "Product", id: "./CS309-Front-End/EditProduct" },
+    { title: "About", id: "./CS309-Front-End/About" },
+    { title: "UsersList", id: "./CS309-Front-End/UsersList" },
   ];
 }
 if ("response.data.message" === "User logged In") {
   pages = [
-    { title: "Products", id: "./ProductList" },
-    { title: "About", id: "./About" },
-    { title: "UsersList", id: "./UsersList" },
-    { title: "Account", id: "./Account" },
+    { title: "Products", id: "./CS309-Front-End/ProductList" },
+    { title: "About", id: "./CS309-Front-End/About" },
+    { title: "UsersList", id: "./CS309-Front-End/UsersList" },
+    { title: "Account", id: "./CS309-Front-End/Account" },
   ];
 }
 

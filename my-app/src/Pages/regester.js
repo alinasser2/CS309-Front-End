@@ -109,7 +109,7 @@ const Register = (props) => {
           placeholder="state"
           required
         />
-        <button type="submit">Log In</button>
+        <button type="submit" style={{width:100,marginLeft:50}}>sign up  </button>
       </form>
     </div>
   );

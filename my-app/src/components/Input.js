@@ -11,7 +11,9 @@ function Input({
 }) {
   return (
     <div className="AM">
+        <div>
       <label className="form-label">{label}</label>
+      </div>
       <input
         type={type}
         className="form-control"

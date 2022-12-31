@@ -47,14 +47,14 @@ function Home() {
             <Post
               key={i}
               painte_name="Starry Night"
-              price="10000"
+              price="1000"
               handleClick={`/Product/${idP.id}`}
               handleAdd={handleAddProduct}
             />
           </Grid>
         ))}
         <Grid item xs={12}>
-          <Button variant="contained" href="/ProductList">
+          <Button variant="contained" href="/CS309-Front-End/ProductList">
             View More Products
           </Button>
         </Grid>

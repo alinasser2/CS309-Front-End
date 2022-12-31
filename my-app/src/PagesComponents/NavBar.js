@@ -23,14 +23,29 @@ import Tooltip from "@mui/material/Tooltip";
 import ReorderSharpIcon from "@mui/icons-material/ReorderSharp";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-
-const settings = [
-  { title: "Products", id: "./ProductList" },
-  { title: "Register", id: "./Register" },
-  { title: "Login", id: "./Login" },
-  { title: "About", id: "./About" },
-  { title: "UsersList", id: "./UsersList" },
+let settings = [
+  { title: "Products", id: "./CS309-Front-End/ProductList" },
+  { title: "Register", id: "./CS309-Front-End/Register" },
+  { title: "Login", id: "./CS309-Front-End/Login" },
+  { title: "About", id: "./CS309-Front-End/About" },
 ];
+if ("admin" === "admin") {
+  settings = [
+    { title: "Product", id: "./CS309-Front-End/EditProduct" },
+    { title: "About", id: "./CS309-Front-End/About" },
+    { title: "UsersList", id: "./CS309-Front-End/UsersList" },
+  ];
+}
+if ("response.data.message" === "User logged In") {
+  settings = [
+    { title: "Products", id: "./CS309-Front-End/ProductList" },
+    { title: "About", id: "./CS309-Front-End/About" },
+    { title: "UsersList", id: "./CS309-Front-End/UsersList" },
+    { title: "Account", id: "./CS309-Front-End/Account" },
+  ];
+}
+
+
 
 const Logo = styled("img")(() => ({
   width: "5rem",
@@ -48,7 +63,7 @@ const Search = styled("div")(({ theme }) => ({
   width: "100%",
   minWidth: "300px",
   [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(-235),
+    marginLeft: theme.spacing(-210),
     width: "auto",
   },
 }));
@@ -102,7 +117,7 @@ const Header = () => {
     <React.Fragment>
       <AppBar sx={{ background: "#393E46", height: "75px" }}>
         <Toolbar>
-          <a href="/">
+          <a href="/CS309-Front-End/">
             <Logo src={logo} />
           </a>
           {isMatch ? (
@@ -121,24 +136,23 @@ const Header = () => {
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
-                <a href="./ProductList">
+                <a href="./CS309-Front-End/ProductList">
                   <Tab className="links" label="Procects" />
                 </a>
-                <a href="./Register">
+                <a href="./CS309-Front-End/Register">
                   <Tab className="links" label="Register" />
                 </a>
-                <a href="./Login">
+                <a href="./CS309-Front-End/Login">
                   <Tab className="links" label="Login" />
                 </a>
-                <a href="./About">
+                <a href="./CS309-Front-End/About">
                   <Tab className="links" label="About" />
                 </a>
-                if(1===2)
-                {
+                {/* if("1"==="2"){
                   <a href="./UsersList">
                     <Tab className="links" label="UsersList" />
                   </a>
-                }
+                } */}
               </Tabs>
 
               {/* <Box sx={ {marginLeft: "1" } }>

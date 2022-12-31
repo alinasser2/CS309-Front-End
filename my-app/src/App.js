@@ -17,21 +17,21 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route excet path="/" element={<Home />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="Product/Login" element={<Login />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="Product/Register" element={<Register />} />
-        <Route path="/About" element={<About />} />
-        <Route path="Product/About" element={<About />} />
-        <Route path="/ProductList" element={<ProductList />} />
-        <Route path="Product/ProductList" element={<ProductList />} />
-        <Route path="/UsersList" element={<UsersList />} />
-        <Route path="/Product/:id" element={<Product />} />
-        <Route path="/CartItem" element={<CartItem />} />
-        <Route path="Product/CartItem" element={<CartItem />} />
-        <Route path="/EditProduct" element={<AdminProduct />} />
-        {/* <Route path="/Register" element={<Register/>} />   */}
+        <Route excet path="/CS309-Front-End/" element={<Home />} />
+        <Route path="/CS309-Front-End/Login" element={<Login />} />
+        <Route path="/CS309-Front-End/Product/Login" element={<Login />} />
+        <Route path="/CS309-Front-End/Register" element={<Register />} />
+        <Route path="/CS309-Front-End/Product/Register" element={<Register />} />
+        <Route path="/CS309-Front-End/About" element={<About />} />
+        <Route path="/CS309-Front-End/Product/About" element={<About />} />
+        <Route path="/CS309-Front-End/ProductList" element={<ProductList />} />
+        <Route path="/CS309-Front-End/Product/ProductList" element={<ProductList />} />
+        <Route path="/CS309-Front-End/UsersLis" element={<UsersList />} />
+        <Route path="/CS309-Front-End/Product/:id" element={<Product />} />
+        <Route path="/CS309-Front-End/CartItem" element={<CartItem />} />
+        <Route path="/CS309-Front-End/Product/CartItem" element={<CartItem />} />
+        <Route path="/CS309-Front-End/EditProduct" element={<AdminProduct />} />
+        {/* <Route path="/CS309-Front-End/Register" element={<Register/>} />   */}
       </Routes>
       <Footer />
     </BrowserRouter>

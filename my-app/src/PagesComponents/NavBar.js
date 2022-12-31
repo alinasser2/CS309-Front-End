@@ -29,7 +29,7 @@ let settings = [
   { title: "Login", id: "./CS309-Front-End/Login" },
   { title: "About", id: "./CS309-Front-End/About" },
 ];
-if ("admin" === "admin") {
+if ("Admin" === "admin") {
   settings = [
     { title: "Product", id: "./CS309-Front-End/EditProduct" },
     { title: "About", id: "./CS309-Front-End/About" },

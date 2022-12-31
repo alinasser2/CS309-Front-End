@@ -16,7 +16,7 @@ let pages = [
   { title: "Login", id: "./CS309-Front-End/Login" },
   { title: "About", id: "./CS309-Front-End/About" },
 ];
-if ("admin" === "admin") {
+if ("Admin" === "admin") {
   pages = [
     { title: "Product", id: "./CS309-Front-End/EditProduct" },
     { title: "About", id: "./CS309-Front-End/About" },
